@@ -13,7 +13,7 @@ class FileController {
 
         await box.save();
 
-        req.io.sockets.in('_id').emit('file', file) //todos os usuários conextados naquela box naquele id
+        req.io.sockets.in('_id').emit('file', file) //envia file p/ todos os usuários conextados naquela box naquele id
 
         return res.json(file);
     }
